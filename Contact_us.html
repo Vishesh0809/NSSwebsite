@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS BIT Mesra - Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            /* To position circles absolutely */
+            overflow: hidden;
+            /* Hide overflow for circles */
+        }
+
+        /* Circle styles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            /* Make it circular */
+            z-index: -1;
+            /* Keep circles behind content */
+            opacity: 0.5;
+            /* Make circles slightly transparent */
+        }
+
+        /* Example circles - you can duplicate this for more circles */
+        .circle1 {
+            left: -100px;
+            /* Horizontal position */
+            top: 25%;
+            /* Vertical position */
+            width: 250px;
+            /* Circle size (radius) */
+            height: 250px;
+            /* Circle size (radius) */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Circle color with opacity */
+        }
+
+        .circle2 {
+            left: -100px;
+            top: 95%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .circle3 {
+            right: -70px;
+            top: 10%;
+            width: 90px;
+            height: 90px;
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+
+        .circle4 {
+            right: -40px;
+            top: 50%;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(255, 255, 0, 0.5);
+        }
+
+        /* New circles */
+        .circle5 {
+            left: 30%;
+            /* Horizontal position */
+            top: 70%;
+            /* Vertical position */
+            width: 120px;
+            /* Circle size */
+            height: 120px;
+            background-color: rgba(255, 0, 255, 0.5);
+        }
+
+        .circle6 {
+            right: 20%;
+            top: 30%;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+
+        header {
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+            /* To keep header content above circles */
+            z-index: 1;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+            margin-left: 40px;
+        }
+
+        .slogan {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 20px;
+            border-radius: 20px;
+            /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Shadow effect */
+            transition: background-color 0.3s, transform 0.3s;
+            /* Smooth transition */
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            /* Lift effect on hover */
+        }
+
+        .container {
+            padding: 20px;
+            position: relative;
+            /* Keep content above circles */
+            z-index: 1;
+            /* Ensure text is above circles */
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .quick-links,
+        .social-media {
+            margin: 10px 0;
+        }
+
+        .quick-links a,
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Example circles -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+    <div class="circle circle6"></div>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="NSSlogo.png" alt="NSS BIT Mesra Logo">
+                <div class="slogan">NSS BIT MESRA</div>
+            </div>
+            <div class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="About_us.html">About Us</a>
+                <a href="Events.html">Events</a>
+                <a href="Contact_us.html">Contact Us</a>
+                <a href="Teams.html">Teams</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us!</p>
+    </div>
+
+    <footer>
+        <div class="quick-links">
+            <h4>Quick Links:</h4>
+            <a href="Home.html">Home</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="About_us.html">About Us</a>
+            <a href="Events.html">Events</a>
+            <a href="Contact_us.html">Contact Us</a>
+            <a href="Teams.html">Teams</a>
+        </div>
+        <div class="social-media">
+            <h4>Follow Us:</h4>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+</html>

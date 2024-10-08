@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS BIT Mesra - Teams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+            /* Prevent horizontal overflow */
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Example circles */
+        .circle1 {
+            left: -100px;
+            top: 04%;
+            width: 250px;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .circle2 {
+            left: -50px;
+            top: 35%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(122, 0, 94, 0.5);
+        }
+
+        .circle3 {
+            right: -15px;
+            top: 8%;
+            width: 140px;
+            height: 140px;
+            background-color: rgba(199, 182, 0, 0.5);
+        }
+
+        .circle4 {
+            right: -50px;
+            top: 50%;
+            width: 190px;
+            height: 190px;
+            background-color: rgba(243, 50, 20, 0.5);
+        }
+
+        .circle5 {
+            left: -50px;
+            top: 55%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 187, 255, 0.5);
+        }
+
+        .circle6 {
+            right: -50px;
+            top: 30%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .circle7 {
+            right: -85px;
+            top: 70%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(8, 229, 0, 0.796);
+        }
+
+        .circle8 {
+            left: -30px;
+            top: 85%;
+            width: 90px;
+            height: 90px;
+            background-color: rgba(206, 0, 192, 0.5);
+        }
+
+        header {
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+            margin-left: 40px;
+        }
+
+        .slogan {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
+            /* Ensure space for header */
+        }
+
+        h1 {
+            text-align: left;
+            margin-left: 80px;
+            font-size: 50px;
+            /* Change font size for h1 */
+            color: #000000;
+            /* Change font color for h1 */
+            margin-top: 20px;
+            /* Adjust top margin */
+            margin-bottom: 20px;
+            /* Adjust bottom margin */
+        }
+
+        h2 {
+            position: relative;
+            margin-top: 40px;
+            margin-bottom: -140px;
+            padding-left: 90px;
+            /* Space between line and text */
+            font-size: 40px;
+            /* Change font size for h2 */
+            color: #00028a;
+            /* Change font color for h2 */
+        }
+
+        .core-team {
+            font-size: 40px;
+            /* Change font size */
+            color: #00028a;
+            /* Change color */
+            margin-top: -100px;
+            /* Adjust margin above */
+            margin-bottom: -140px;
+            /* Adjust margin below */
+            /* Add any other properties you want to change */
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            left: -5%;
+            /* Position from the left */
+            top: 50%;
+            /* Center vertically */
+            transform: translateY(-50%);
+            /* Center the line */
+            width: 150px;
+            /* Width of the line */
+            height: 12px;
+            /* Thickness of the line */
+            border-radius: 6px;
+            background-color: #00028a;
+            /* Color of the line */
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            padding: 120px;
+            margin-left: -20px;
+            margin-right: 0px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: -15px;
+        }
+
+        .name {
+            align-items: center;
+            margin: -8px 0;
+            font-size: 18;
+            font-weight: bolder;
+        }
+
+        .position {
+            font-size: 16px;
+            margin: -22px 0;
+        }
+
+        .team-member img {
+            border-radius: 10%;
+            height: 220px;
+            width: 235px;
+            padding-top: -10px;
+        }
+
+        .logo-profile img {
+            height: 43px;
+            width: 43px;
+            margin: 6px 0;
+        }
+
+        .box {
+            position: relative;
+            width: 210px;
+            height: 280px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            overflow: hidden;
+            padding: 20px;
+            margin: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .quick-links,
+        .social-media {
+            margin: 10px 0;
+        }
+
+        .quick-links a,
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .team-member {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Example circles -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+    <div class="circle circle6"></div>
+    <div class="circle circle7"></div>
+    <div class="circle circle8"></div>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="NSSlogo.png" alt="NSS BIT Mesra Logo">
+                <div class="slogan">NSS BIT MESRA</div>
+            </div>
+            <div class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="About_us.html">About Us</a>
+                <a href="Events.html">Events</a>
+                <a href="Contact_us.html">Contact Us</a>
+                <a href="Teams.html">Teams</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Our Team</h1>
+        <h2>Faculty Coordinators</h2>
+        <div class="team-container">
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 1">
+                    <div class="name">
+                        <p>DR. BHASKAR KARN</p>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                    <div class="logo-profile">
+                        <a
+                            href="https://www.bitmesra.ac.in/Show_profile/48496967786744346832434C592B5056426B742B47773D3D"><img
+                                src="NSSlogo.png" alt="DR. BHASKAR KARN PROFILE"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 2">
+                    <div class="name">
+                        <p>DR. OM PRAKASH PANDEY</p>
+                    </div>
+                    <div class="position">
+                        <p>PROGRAMME COORDINATOR</p>
+                    </div>
+                    <div class="logo-profile">
+                        <a
+                            href="https://www.bitmesra.ac.in/Show_profile/3679614F65483557615743533874543452645A3368413D3D"><img
+                                src="NSSlogo.png" alt="DR. OM PRAKASH PANDEY PROFILE"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="core-team">Core Team</h2>
+        <div class="team-container">
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 3">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 4">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 5">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 6">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 7">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 8">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 9">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 10">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 11">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 12">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 13">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 14">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 15">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 16">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 17">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 18">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 19">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 20">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 21">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 22">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 23">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 24">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 25">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 26">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="Profile photo.jpg" alt="Member 27">
+                    <div class="name">
+                        <h3>DR. BHASKAR KARN</h3>
+                    </div>
+                    <div class="position">
+                        <p>CHAIRPERSON</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="quick-links">
+            <h4>Quick Links:</h4>
+            <a href="Home.html">Home</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="About_us.html">About Us</a>
+            <a href="Events.html">Events</a>
+            <a href="Contact_us.html">Contact Us</a>
+            <a href="Teams.html">Teams</a>
+        </div>
+        <div class="social-media">
+            <h4>Follow Us:</h4>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+</html>
